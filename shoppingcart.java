@@ -1,48 +1,30 @@
-package operator;
-import java.util.Scanner;
+package polymorphism;
+class cart{
+	public void bill(String itemname) {
+		System.out.println("Item name");
+	}
+	public void bill(String itemname,int quality) {
+		System.out.println("Iteamname And Quality");
+	}
+	public void bill(String itemname,int quality,String size) {
+		System.out.println("Iteamname and Quality and Size");
+	}
+	public void bill(String itemname,int quality,String size,String color) {
+		System.out.println("Iteamname and Quality and Size and color");
+	}
+}
 
 public class shoppingcart {
 
 	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
+		cart ob=new cart();{
+			ob.bill("Books");
+			ob.bill("Books", 2);
+			ob.bill("Books", 2, "SMALL");
+			ob.bill("Books", 2, "small", "Black");
+		}
 		
-		
-		 System.out.print("Enter the quantity of the item: ");
-	        int quantity = sc.nextInt();
-
-	        System.out.print("Enter the price of the item: ");
-	        double price = sc.nextDouble();
-
-	       
-	        double totalBeforeTax = quantity * price;
-
-	       
-	        double discount = 0.10 * totalBeforeTax;
-	        double discountedTotal = totalBeforeTax - discount;
-
-	        
-	        double taxRate = 0.07;
-	        double tax = taxRate * discountedTotal;
-
-	        
-	        double finalTotal = discountedTotal + tax;
-
-	        
-	        System.out.println("Quantity: " + quantity);
-	        System.out.println("Price per item: $" + price);
-	        System.out.println("Total cost before discount: $" + totalBeforeTax);
-	        System.out.println("Discount: $" + discount);
-	        System.out.println("Discounted total: $" + discountedTotal);
-	        System.out.println("Tax: $" + tax);
-	        System.out.println("Final total: $" + finalTotal);
-
-	        
-	        sc.close();
-	    }
-	
-
-	
-	
 
 	}
 
+}

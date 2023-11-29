@@ -1,52 +1,36 @@
-package constructor;
+package polymorphism;
 
-class A{
-	int rollno=123;
-	String name="Madhu";
-	int price=4000;
-	String Cname="Bmw";
-	String Cmod="S";
-	
-	
-	A(){
-		System.out.println("========student details===============");
+class test{
+	public void display() {
+		System.out.println("no arg");
 	}
-	A(int rollno,String name){
-		this.rollno = rollno;
-		this.name = name;
-		
+	public void display(int a) {
+		System.out.println("1 arg");
 	}
-	A(int price,String Cname,String Cmod){
-		this.price=price;
-		this.Cname=Cname;
-		this.Cmod=Cmod;
+	public void display(int a,int b) {
+		System.out.println("2 arg");
 	}
-	//A(){
-		//System.out.println("no argument constuctor");
-	//}
-   //	A(int a,int b){
-		//System.out.println("parameterized constructor");
-	//}
+	public void display(int a,int b,int c) {
+		System.out.println("3 arg");
+	}
+	public void display(int a,float b) {
+		System.out.println("Interchanging");
+	}
+	public void display(float a,int b) {
+		System.out.println("Interchanging int to float");
+	}
 }
+
 public class Demo {
 
 	public static void main(String[] args) {
-		A ob=new A(123,"Madhu");
-		A ob1=new A();
-		A ob2=new A(4000,"Bmw","s");
-		A ob3=new A(400000,"Audi","s");
-		
-		System.out.println("name is:"+ob.name);
-		System.out.println("rollno is:"+ob.rollno);
-		System.out.println("=========car details==============");
-		System.out.println("car name is:"+ob2.Cname);
-		System.out.println("car modle is:"+ob2.Cmod);
-		System.out.println("car price is:"+ob2.price);
-		System.out.println("==========car deatils2==============");
-		System.out.println("car name is:"+ob3.Cname);
-		System.out.println("car modle is:"+ob3.Cmod);
-		System.out.println("car price is:"+ob3.price);
-		
+		test ob=new test();
+		ob.display();
+		ob.display(12);
+		ob.display(2, 2);
+		ob.display(10, 5, 10);
+		ob.display(12, 5.5f);
+		ob.display(10.5f, 5);
 
 	}
 

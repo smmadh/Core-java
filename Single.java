@@ -1,26 +1,20 @@
-package Arrays;
-//arrays are fix in size
-//arrays can have same data
+package com.inter;
 
-
+class Employee  
+{    
+float salary=34534*12;    
+}    
+class Executive extends Employee  
+{   
+float bonus=3000*6;  
+}
 public class Single {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
- int a[]= {1,2,3,4,5,6,7,8,9};
- System.out.println(a.length);
- 
- 
-//length of single value
- System.out.println("======================");
- String[] s= {"a","bb","ccc"};
- System.out.println("length is:"+s.length);
- System.out.println("length of first string:"+s[0].length());
- System.out.println("length of second string:"+s[1].length());
- System.out.println("length of third string:"+s[2].length());
- 
- 
- }
+		Executive obj=new Executive();   
+		System.out.println("Total salary credited: "+obj.salary);    
+		System.out.println("Bonus of six months: "+obj.bonus);
+
 	}
 
-
+}
